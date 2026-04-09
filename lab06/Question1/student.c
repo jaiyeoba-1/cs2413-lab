@@ -8,14 +8,17 @@
 // The value at adj[u][v] is 1 if there is an edge between nodes u and v, and 0 otherwise.
 
 
-
-
 int count_edges(Graph* g) {
-    // TODO: implement
-    // return -1;
+    int count = 0;
 
+    for (int i = 0; i < MAX_NODES; i++) {
+        for (int j = 0; j < MAX_NODES; j++) {
+            count += g->adj[i][j];
+        }
+    }
+
+    return count / 2;
 }
-
 
 
 
